@@ -1,0 +1,41 @@
+﻿@model ProjectManager.Models.TheManager
+
+<form asp-action="OnPostDelete" asp-controller="TheManager">
+    @*<input name="ProgrammerId" type="hidden" asp-for="@Programmer.Id" />
+    <input name="ProjectId" type="hidden" value="@project.Id" />*@
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Delete programmer</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Programmer.FirstName"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Project.ProjectName"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <input asp-for="ProgrammerId" name="ProgrammerId" disabled class="form-control" />
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="ProjectId" name="ProjectId" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-1 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-50" value="Delete" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-50">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
